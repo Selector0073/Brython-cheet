@@ -22,11 +22,11 @@ button that hides the box
 script:
 
 def toggle(event):
-  box = document["mybox"]
-  if box.style.display == "none":
+  box = document["mybox"] //all with id mybox is box element
+  if box.style.display == "none": //if box is show > block
     box.style.display = "block"
   else:
     box.style.display = "none"
 
-  document["toggle_btn"].bind("click", toggle)
+  document["toggle_btn"].bind("click", toggle) //id toggle_btn activate toggle function when click
 ```
