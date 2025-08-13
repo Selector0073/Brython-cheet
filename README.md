@@ -6,10 +6,27 @@
 </head>
 
 <body>
-  <script type="text/python">
+  <script type="text/python" id="myscript">
     from browser import document, alert, console, window, timer
     --BRYTHON CODE--
   </script>
 ```
 
-# Commands
+# Commands:
+button that hides the box
+```
+<button id="toggle_btn">hide</button>
+
+<div id="mybox"><img src="https://cdn-icons-png.flaticon.com/512/2175/2175188.png" alt="1"> <p>img</p></div>
+
+script:
+
+def toggle(event):
+  box = document["mybox"]
+  if box.style.display == "none":
+    box.style.display = "block"
+  else:
+    box.style.display = "none"
+
+  document["toggle_btn"].bind("click", toggle)
+```
